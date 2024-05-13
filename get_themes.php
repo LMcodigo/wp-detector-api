@@ -1,30 +1,8 @@
 <?php
-<<<<<<< HEAD
-require 'find_themes.php';
-require 'database_connection.php';
-require 'get_website.php';
-=======
->>>>>>> upstream/main
 
 require_once 'database_connection.php';
 require_once 'find_themes.php';
 
-<<<<<<< HEAD
-    $conn = open_database_connection();
-    $wp = database_read_website($conn, $url);
-    if ($wp === null) {
-    //if ($wpContent === null) {
-        require 'get_html.php';
-        require 'find_wp_content.php';
-        $html = get_html($url);
-        $wpContent = find_wp_content($html);
-        $themes = find_themes($html, $wpContent,null);
-    }
-    else if ($wp === true) {
-        $themes = find_themes(null, null, $url);
-    }
-    // $themes = find_themes($html, $wpContent);
-=======
 // Returns the plugins of a given url
 function get_themes($url)
 {
@@ -60,7 +38,6 @@ function get_themes($url)
     // Convert the associative array to an indexed array
     $themes = array_values($themes);
 
->>>>>>> upstream/main
     return $themes;
 }
 
